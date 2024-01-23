@@ -1,0 +1,32 @@
+* {
+  text-decoration: none;
+}
+
+a { color: inherit; } 
+
+.header {
+  background-color: rgb(56, 56, 100);
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+.navbar {
+  text-align: right;
+  color: white;
+}
+
+.quote_1 {
+  color: white;
+}
+
+.quote_2 {
+  color: white;
+}
+
+body {
+  background-image:url(app\static\Images\cars\arid.webp);
+}

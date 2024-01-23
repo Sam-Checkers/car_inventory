@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="../static/css/main.css">
+
+<head>
+<section class="header">
+    <div class="quote_1">
+        <h2>"Bring me my Chariot of fire!" <br> - William Blake</h2>
+    </div>
+    <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a href="{{ url_for('site.home') }}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('site.profile') }}" class="nav-link">Profile</a>
+            </li>
+            {% if current_user.is_authenticated %}
+            <li class="nav-item">
+                <a href="{{ url_for('auth.logout') }}" class="nav-link">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a href="{{ url_for('auth.signin') }}" class="nav-link">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('auth.signup') }}" class="nav-link">Sign Up</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div
+    <nav class="navbar">
+        <a href="url">Home</a>
+        <a href="url">Profile</a>
+        <a href="url">Sign Up</a>
+        <a href="url">Sign In</a>
+        <a href="url">Sign Out</a>
+    </nav>
+    <h1 class="title">CAR UNIVERSE</h1>
+    <div class="quote_2">
+        <h2>"And you may find yourself behind the wheel of a large automobile!" <br> - David Byrne</h2>
+    </div>
+</section>
+</head>
+<body>
+    <p style="background-image: url('app\static\Images\cars\arid.webp');">
+<section class="car_list">
+    <div class="car_1">
+        <img src="app\static\Images\cars\Interceptor.png" alt="">
+    </div>
+    <div class="car_2">
+        <img src="app\static\Images\cars\gigahorse.webp" alt="">
+    </div>
+    <div class="car_3">
+        <img src="app\static\Images\cars\Buggy 09.webp" alt="">
+    </div>
+    <div class="car_4">
+        <img src="app\static\Images\cars\war rig.jpg" alt="">
+    </div>
+    <div class="car_5">
+        <img src="app\static\Images\cars\crv.avif" alt="">
+    </div>
+</section>
+</body>
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="navbar-brand">Phonebook</a>
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navmenu"
+        ><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="{{ url_for('site.home') }}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('site.profile') }}" class="nav-link">Profile</a>
+                </li>
+                {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{{ url_for('auth.logout') }}" class="nav-link">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a href="{{ url_for('auth.signin') }}" class="nav-link">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('auth.signup') }}" class="nav-link">Sign Up</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div
+    </div>
+</nav>
+<footer>
+
+</footer>
