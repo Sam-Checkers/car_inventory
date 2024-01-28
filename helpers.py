@@ -27,7 +27,6 @@ def token_required(our_flask_function):
         return our_flask_function(current_user_token, *args, **kwargs)
     return decorated
 
-
 class JSONEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, decimal.Decimal):

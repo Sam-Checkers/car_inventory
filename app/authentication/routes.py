@@ -1,4 +1,4 @@
-from forms import UserLoginForm
+from forms import UserLoginForm, RegistrationForm
 from models import User, db, check_password_hash
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 
@@ -9,7 +9,7 @@ auth = Blueprint('auth', __name__, template_folder='auth_templates')
 
 @auth.route('/signup', methods = ['GET', 'POST'])
 def signup():
-    form = UserLoginForm()
+    form = RegistrationForm()
 
     try:
         if request.method == 'POST' and form.validate_on_submit():

@@ -1,6 +1,23 @@
 {% extends 'base.html' %}
 
-{% block content %} 
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../../static/CSS/profile.css">
+</head>
+<section class="header">
+    <a class="title" href="{{ url_for('site.home') }}">CAR UNIVERSE</a>
+    <h3 class="page">Profile</h3>
+</section>
+<body>
     <section class="bg-dark text-light text-center shadow mb-20">
         <div class="container p-5 bg-dark">
             <div class="row">
@@ -20,13 +37,14 @@
                 <li class="list-group-item">Token: {{ current_user.token }} </li> 
             </ul>
         </div>
-        <div class="row" style="margin-top: 20px;">
-            <div class="col-4"></div>
-            <div class="col-3 p-10">
-                <img src="../../static/images/undraw_delivery_address_03n0.svg" class="d-flex align-items-center justify-content-center p-50 img-fluid" alt="">
-            </div>
-            <div class="col-3"></div>
-        </div>
     </div>
     </section>
+    <section class="cars">
+        <h1 class="car-title">Your Cars:</h1>
+        {{% include "car_form.html" %}}
+    </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
 {% endblock %}

@@ -1,6 +1,7 @@
-from flask import Blueprint, request, jsonify, render_template
+from flask import Blueprint, request, jsonify, render_template, redirect
 from helpers import token_required
 from models import db, User, Contact, contact_schema, contacts_schema
+from forms import PostCar
 
 api = Blueprint('api',__name__, url_prefix='/api')
 @api.route('/getdata')
@@ -25,3 +26,9 @@ def create_contact(current_user_token):
 
     response = contact_schema.dump(contact)
     return jsonify(response)
+
+@api.route("post/new", methods = ['GET', 'POST'])
+def add_car():
+    form = PostCar()
+    return render_template('car_form.html', title = 'New_Car', form=form)
+    return redirect("{{ url_for('site.profile') }}")

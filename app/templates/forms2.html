@@ -1,0 +1,28 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <fieldset id="first-name-field">
+        <font class="first_label">First Name</font>
+        {{ form.first_name(class = 'form-control', placeholder = 'place first name here ') }}
+    </fieldset>    
+    
+    <fieldset id="last-name-field">
+        <font class="last_label">Last Name</font>
+        {{ form.last_name(class = 'form-control', placeholder = 'place last name here ') }}
+    </fieldset>  
+
+    <div class="form-group">
+        <fieldset id="email-field">
+            {{ form.email.label }}
+            {{ form.email(class = 'form-control', placeholder = 'place email here ') }}
+        </fieldset>
+    </div>
+
+        <fieldset id="pass-field">
+            {{ form.password.label }}
+            {{ form.password(class = "form-control", placeholder = "Place password here ") }}
+        </fieldset>
+
+        {{ form.submit(class = "btn btn-primary btn-block mt-2", placeholder = 'Submit')}}
+
+</form>

@@ -6,7 +6,7 @@
   };
 }
 
-a { color: inherit; } 
+a { color: inherit; }
 
 html, body {
   max-width: 100%;
@@ -27,7 +27,7 @@ body {
   text-align: center;
   color: white;
   font-size: 50px;
-  margin-right: 500px;
+  margin-right: 20px;
 }
 
 .navbar {
@@ -35,6 +35,9 @@ body {
   margin-top: 0px;
   width: 25%;
   margin-left: 1400px;
+  position: relative;
+  background-color: rgb(56, 56, 100);
+  text-decoration: none;
 }
 
 .quote_1 {
@@ -48,7 +51,7 @@ body {
 }
 
 .background {
-  background-image: url(Images\cars\road.png);
+  background-image: url(../../static/Images/cars/road.png);
   position: absolute;
   z-index: -1;
   width: 40%;
