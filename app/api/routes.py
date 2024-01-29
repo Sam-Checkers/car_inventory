@@ -30,5 +30,4 @@ def create_contact(current_user_token):
 @api.route("post/new", methods = ['GET', 'POST'])
 def add_car():
     form = PostCar()
-    return render_template('car_form.html', title = 'New_Car', form=form)
-    return redirect("{{ url_for('site.profile') }}")
+    return render_template('car_form.html', title = 'New_Car', form=form), redirect("{{ url_for('site.profile') }}")
